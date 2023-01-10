@@ -1,38 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --heading-color: #001f3f;
+  --primary-font: 'Roboto', sans-serif;
+  --body-color: #e0e0e0;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--body-color);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  color: var(--heading-color);
+  font-family: var(--primary-font);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  background: url('./assets/wave-haikei.svg') top no-repeat;
+  background-size: cover;
+}
+
+.bx-shadow-app__header {
+  margin-bottom: 100px;
+}
+
+.bx-shadow-app__header > :is(h1, h2, h3, h4, h5, h6) {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bx-shadow-demo {
+  width: 100%;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.sliders-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--body-color);
+  padding: 1.8rem 2rem;
+  border-radius: 25px;
+}
+
+.code-snippet {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .tool-row {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 100px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 3rem 1rem;
+  }
+}
+
